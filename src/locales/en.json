@@ -1,0 +1,12 @@
+{
+  "AverageOfArry_Description": "I read that Senior devs struggled to write a program that returned the average of an array of numbers. So, I decided to code it :)",
+  "AverageOfArry_Title": "This component returns the average of an array of numbers.",
+  "AverageOfArry_HelperText": "Enter numbers separated by commas",
+  "AverageOfArry_HelperTextError": "Invalid input! ",
+  "AverageOfArry_TextFieldLabel": "Type Away!",
+  "AverageOfArry_Average": "Average of Array: ",
+  "BPMCounter_Title": "This component returns the the BPM (Beats Per Minute) by tapping on the button below",
+  "BPMCounter_Tap_Btn": "Tap Me!",
+  "BPMCounter_Reset_Btn": "Reset",
+  "PaletteSelection_Title": "This component changes the color theme of the page."
+}

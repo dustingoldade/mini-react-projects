@@ -1,0 +1,67 @@
+{
+  "GREEN": {
+    "COLOR_BG": "#abd1c6",
+    "COLOR_HEADER": "#004643",
+    "COLOR_HEADLINE": "#fffffe",
+    "COLOR_SECONDARY": "#004643",
+    "COLOR_SECONDARY_CONTRAST": "#fffffe",
+    "COLOR_BUTTON": "#f9bc60",
+    "COLOR_BUTTON_TEXT": "#001e1d",
+    "COLOR_ALERT": "#e16162",
+    "COLOR_ALERT_TEXT": "#FFFFFF",
+    "HEADER_ELEVATION": 2,
+    "NAME": "Green"
+  },
+  "DARK": {
+    "COLOR_BG": "#a7a9be",
+    "COLOR_HEADER": "#0f0e17",
+    "COLOR_HEADLINE": "#fffffe",
+    "COLOR_SECONDARY": "#0f0e17",
+    "COLOR_SECONDARY_CONTRAST": "#fffffe",
+    "COLOR_BUTTON": "#ff8906",
+    "COLOR_BUTTON_TEXT": "#fffffe",
+    "COLOR_ALERT": "#e53170",
+    "COLOR_ALERT_TEXT": "#FFFFFF",
+    "HEADER_ELEVATION": 1,
+    "NAME": "Dark"
+  },
+  "ROYAL": {
+    "COLOR_BG": "#fffffe",
+    "COLOR_HEADER": "#00214d",
+    "COLOR_HEADLINE": "#fffffe",
+    "COLOR_SECONDARY": "#00214d",
+    "COLOR_SECONDARY_CONTRAST": "#fffffe",
+    "COLOR_BUTTON": "#00ebc7",
+    "COLOR_BUTTON_TEXT": "#00214d",
+    "COLOR_ALERT": "#ff5470",
+    "COLOR_ALERT_TEXT": "#fffffe",
+    "HEADER_ELEVATION": 1,
+    "NAME": "Royal"
+  },
+  "BATMAN": {
+    "COLOR_BG": "#fffffe",
+    "COLOR_HEADER": "#16161a",
+    "COLOR_HEADLINE": "#fffffe",
+    "COLOR_SECONDARY": "#16161a",
+    "COLOR_SECONDARY_CONTRAST": "#fffffe",
+    "COLOR_BUTTON": "#7f5af0",
+    "COLOR_BUTTON_TEXT": "#fffffe",
+    "COLOR_ALERT": "#2cb67d",
+    "COLOR_ALERT_TEXT": "#fffffe",
+    "HEADER_ELEVATION": 1,
+    "NAME": "Batman"
+  },
+  "CLEAN": {
+    "COLOR_BG": "#FFFFFF",
+    "COLOR_HEADER": "#1976d2",
+    "COLOR_HEADLINE": "#FFFFFF",
+    "COLOR_SECONDARY": "#FFFFFF",
+    "COLOR_SECONDARY_CONTRAST": "#000000",
+    "COLOR_BUTTON": "#1976d2",
+    "COLOR_BUTTON_TEXT": "#FFFFFF",
+    "COLOR_ALERT": "#d32f2f",
+    "COLOR_ALERT_TEXT": "#ffffff",
+    "HEADER_ELEVATION": 1,
+    "NAME": "Clean"
+  }
+}
