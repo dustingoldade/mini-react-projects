@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import ElementPaper from "../core_elements/ElementPaper";
 import ElementButton from "../core_elements/ElementButton";
 import ElementTitle from "../core_elements/ElementTitle";
+import ElementTextField from "../core_elements/ElementTextField";
 import jsonText from "../../locales/en.json";
 import muiStyles from "../../locales/muiStyles.json";
 import allPaletteThemesObj from "../../locales/colorPalette.json";
@@ -39,6 +40,7 @@ const PaletteSelection = ({ setSelectedColorPalette, activePalette }) => {
       <Box sx={{ mt: PADDING_MED }}>
         {paletteButtons(setSelectedColorPalette)}
       </Box>
+      <ElementTextField color={"green"} />
     </ElementPaper>
   );
 };

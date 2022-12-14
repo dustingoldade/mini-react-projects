@@ -47,19 +47,6 @@ const AverageOfArray = ({ activePalette }) => {
       <ElementTitle title={AverageOfArry_Title} activePalette={activePalette} />
       <Box sx={{ mt: PADDING_MED }}>
         <TextField
-          sx={{
-            input: { color: COLOR_SECONDARY_CONTRAST },
-            label: { color: COLOR_SECONDARY_CONTRAST },
-            color: COLOR_ALERT,
-          }}
-          MuiFormHelperText={{
-            color: "red",
-          }}
-          // inputProps={{
-          //   sx: {
-          //     borderBottom: `solid ${COLOR_SECONDARY_CONTRAST} 3px`,
-          //   },
-          // }}
           variant="standard"
           error={showErrorInput}
           id="filled-basic"

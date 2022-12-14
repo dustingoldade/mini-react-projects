@@ -8,6 +8,7 @@ import colorPalette from "./locales/colorPalette.json";
 import usePalettes from "./locales/usePalettes";
 import PaletteSelection from "./components/palette_selection/PaletteSelction";
 import { formControlClasses } from "@mui/material";
+import NewPhotos from "./components/new_photos/NewPhotos";
 
 function App() {
   const [selectedColorPalette, setSelectedColorPalette] = useState("CLEAN");
@@ -34,6 +35,7 @@ function App() {
         activePalette={activePalette}
         setSelectedColorPalette={setSelectedColorPalette}
       />
+      <NewPhotos activePalette={activePalette} />
     </Box>
   );
 }

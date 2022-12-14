@@ -8,5 +8,10 @@
   "BPMCounter_Title": "This component returns the the BPM (Beats Per Minute) by tapping on the button below",
   "BPMCounter_Tap_Btn": "Tap Me!",
   "BPMCounter_Reset_Btn": "Reset",
+  "NewPhotos_Description": "NOT COMPLETED",
+  "NewPhoto_Title": "This returns pictures of Cats through via API calls",
+  "NewPhoto_Cat_Btn": "Give Me A Cat",
+  "NewPhoto_Dog_Btn": "Give Me A Dog",
+
   "PaletteSelection_Title": "This component changes the color theme of the page."
 }
