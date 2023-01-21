@@ -6,12 +6,17 @@
   "AverageOfArry_TextFieldLabel": "Type Away!",
   "AverageOfArry_Average": "Average of Array: ",
   "BPMCounter_Title": "This component returns the the BPM (Beats Per Minute) by tapping on the button below",
-  "BPMCounter_Tap_Btn": "Tap Me!",
-  "BPMCounter_Reset_Btn": "Reset",
+  "BPMCounter_Btn_Tap": "Tap Me!",
+  "BPMCounter_Btn_Reset": "Reset",
+  "ElementShowCodeSinpIt_Show_Code": "Show Code",
+  "ElementShowCodeSinpIt_Hide_Code": "Hide Code",
   "NewPhotos_Description": "NOT COMPLETED",
-  "NewPhoto_Title": "This returns pictures of Cats through via API calls",
-  "NewPhoto_Cat_Btn": "Give Me A Cat",
-  "NewPhoto_Dog_Btn": "Give Me A Dog",
-
-  "PaletteSelection_Title": "This component changes the color theme of the page."
+  "NewPhoto_Title": "This fetches cat and dog pictures via API calls",
+  "NewPhoto_Btn_Cat": "Give Me A Cat",
+  "NewPhoto_Btn_Dog": "Give Me A Dog",
+  "PaletteSelection_Title": "This component changes the color theme of the page.",
+  "SelecActiveComponentTab_Average_Of_Array": "Array Averager",
+  "SelecActiveComponentTab_BPM_Counter": "BPM Counter",
+  "SelecActiveComponentTab_Change_Color_Theme": "Theme Changer",
+  "SelecActiveComponentTab_Fetch_Img": "Image Fetcher"
 }

@@ -1,18 +1,9 @@
 import { Typography } from "@mui/material";
+import { ThemeContext } from "../../App";
+import { useContext } from "react";
 
-const ElementTitle = ({ title, activePalette }) => {
-  const {
-    COLOR_BG,
-    COLOR_HEADER,
-    HEADER_ELEVATION,
-    COLOR_HEADLINE,
-    COLOR_SECONDARY,
-    COLOR_SECONDARY_CONTRAST,
-    COLOR_BUTTON,
-    COLOR_BUTTON_TEXT,
-    COLOR_ALERT,
-    COLOR_ALERT_TEXT,
-  } = activePalette;
+const ElementTitle = ({ title }) => {
+  const { COLOR_SECONDARY_CONTRAST } = useContext(ThemeContext);
   return (
     <Typography variant="h6" sx={{ color: COLOR_SECONDARY_CONTRAST }}>
       {title}

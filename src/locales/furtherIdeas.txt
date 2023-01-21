@@ -1,2 +1,0 @@
-some kind of API call
-Styled components 

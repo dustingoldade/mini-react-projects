@@ -1,4 +1,17 @@
+.box {
+  position: relative;
+}
+
 .paper__photo {
   max-width: 90%;
   border-radius: 10px;
+}
+
+.paper__circular-progress--float {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  opacity: 0.75;
 }

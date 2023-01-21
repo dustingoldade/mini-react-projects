@@ -1,38 +1,25 @@
-import {
-  Box,
-  Container,
-  Typography,
-  TextField,
-  Button,
-  Paper,
-} from "@mui/material";
+import { Box, Typography, TextField } from "@mui/material";
 import ElementButton from "../core_elements/ElementButton";
 import ElementPaper from "../core_elements/ElementPaper";
 import ElementTitle from "../core_elements/ElementTitle";
 import jsonText from "../../locales/en.json";
 import muiStyles from "../../locales/muiStyles.json";
 import useAverageOfArray from "./UseAverageOfArray";
+import imgs from "../../locales/img/imgIndex";
+import { useContext } from "react";
+import { ThemeContext } from "../../App";
+import ElementShowCodeSinpIt from "../core_elements/showCodeSnipIt/ElementShowCodeSnipIt";
+const { CodeSnipIt_AverageOfArray } = imgs;
 
 const {
   AverageOfArry_Title,
   AverageOfArry_HelperText,
   AverageOfArry_TextFieldLabel,
 } = jsonText;
-const { PADDING_SM, PADDING_MED } = muiStyles;
+const { PADDING_MED } = muiStyles;
 
-const AverageOfArray = ({ activePalette }) => {
-  const {
-    COLOR_BG,
-    COLOR_HEADER,
-    HEADER_ELEVATION,
-    COLOR_HEADLINE,
-    COLOR_SECONDARY,
-    COLOR_SECONDARY_CONTRAST,
-    COLOR_BUTTON,
-    COLOR_BUTTON_TEXT,
-    COLOR_ALERT,
-    COLOR_ALERT_TEXT,
-  } = activePalette;
+const AverageOfArray = () => {
+  const { COLOR_SECONDARY_CONTRAST } = useContext(ThemeContext);
   const {
     numberToShow,
     inputValue,
@@ -43,8 +30,8 @@ const AverageOfArray = ({ activePalette }) => {
   } = useAverageOfArray();
 
   return (
-    <ElementPaper activePalette={activePalette}>
-      <ElementTitle title={AverageOfArry_Title} activePalette={activePalette} />
+    <ElementPaper>
+      <ElementTitle title={AverageOfArry_Title} />
       <Box sx={{ mt: PADDING_MED }}>
         <TextField
           variant="standard"
@@ -57,17 +44,14 @@ const AverageOfArray = ({ activePalette }) => {
         />
       </Box>
       <Box sx={{ my: PADDING_MED }}>
-        <ElementButton
-          onClick={showNumber}
-          activePalette={activePalette}
-          label={"Submit"}
-        />
+        <ElementButton onClick={showNumber} label={"Submit"} />
       </Box>
       <Box>
         <Typography sx={{ color: COLOR_SECONDARY_CONTRAST }}>
           {numberToShow}
         </Typography>
       </Box>
+      <ElementShowCodeSinpIt codeSnipIt={CodeSnipIt_AverageOfArray} />
     </ElementPaper>
   );
 };

@@ -36,12 +36,3 @@ const ElementTextField = ({ color }) => {
 };
 
 export default ElementTextField;
-//   & .MuiInputBase-root {
-//     border-bottom: 2px solid orange;
-//   }
-
-// const StyledTextField = styled(TextField)`
-// & .MuiInputBase-root {
-//   border-bottom: 2px solid ${color};
-// }
-// `;

@@ -4,28 +4,20 @@ import ElementPaper from "../core_elements/ElementPaper";
 import ElementButton from "../core_elements/ElementButton";
 import jsonText from "../../locales/en.json";
 import muiStyles from "../../locales/muiStyles.json";
-import { useState } from "react";
-import usePalettes from "../../locales/usePalettes";
-import { MyLocation } from "@mui/icons-material";
-const { PADDING_SM, PADDING_MED, PADDING_LG } = muiStyles;
-const { BPMCounter_Title, BPMCounter_Tap_Btn, BPMCounter_Reset_Btn } = jsonText;
+import ElementShowCodeSinpIt from "../core_elements/showCodeSnipIt/ElementShowCodeSnipIt";
+import { useState, useContext } from "react";
+import { ThemeContext } from "../../App";
+import imgs from "../../locales/img/imgIndex";
+const { CodeSnipIt_BPM } = imgs;
+
+const { PADDING_MED, PADDING_LG } = muiStyles;
+const { BPMCounter_Title, BPMCounter_Btn_Tap, BPMCounter_Btn_Reset } = jsonText;
 
 let clickCount = 0;
 let firstClickTime = 0;
 
-const BPMCounter = ({ activePalette }) => {
-  const {
-    COLOR_BG,
-    COLOR_HEADER,
-    HEADER_ELEVATION,
-    COLOR_HEADLINE,
-    COLOR_SECONDARY,
-    COLOR_SECONDARY_CONTRAST,
-    COLOR_BUTTON,
-    COLOR_BUTTON_TEXT,
-    COLOR_ALERT,
-    COLOR_ALERT_TEXT,
-  } = activePalette;
+const BPMCounter = () => {
+  const { COLOR_SECONDARY_CONTRAST } = useContext(ThemeContext);
   const [bpmText, setBpmText] = useState("BPM: 0.0");
 
   const bpmClickHandler = (e) => {
@@ -47,14 +39,10 @@ const BPMCounter = ({ activePalette }) => {
   };
 
   return (
-    <ElementPaper activePalette={activePalette}>
-      <ElementTitle title={BPMCounter_Title} activePalette={activePalette} />
+    <ElementPaper>
+      <ElementTitle title={BPMCounter_Title} />
       <Box sx={{ my: PADDING_MED }}>
-        <ElementButton
-          onClick={bpmClickHandler}
-          activePalette={activePalette}
-          label={BPMCounter_Tap_Btn}
-        />
+        <ElementButton onClick={bpmClickHandler} label={BPMCounter_Btn_Tap} />
       </Box>
       <Box>
         <Typography sx={{ color: COLOR_SECONDARY_CONTRAST }}>
@@ -64,11 +52,11 @@ const BPMCounter = ({ activePalette }) => {
       <Box sx={{ mt: PADDING_LG }}>
         <ElementButton
           onClick={resetHandler}
-          activePalette={activePalette}
-          label={BPMCounter_Reset_Btn}
+          label={BPMCounter_Btn_Reset}
           type={"alert"}
         />
       </Box>
+      <ElementShowCodeSinpIt codeSnipIt={CodeSnipIt_BPM} />
     </ElementPaper>
   );
 };

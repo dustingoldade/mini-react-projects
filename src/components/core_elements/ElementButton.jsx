@@ -1,22 +1,25 @@
 import { Button } from "@mui/material";
-import muiStyles from "../../locales/muiStyles.json";
+import { ThemeContext } from "../../App";
+import { useContext } from "react";
 
 const ElementButton = ({
   onClick,
-  activePalette,
   label = "",
   type = "primary",
+  variant = "contained",
+  disabled,
 }) => {
   const { COLOR_BUTTON, COLOR_BUTTON_TEXT, COLOR_ALERT, COLOR_ALERT_TEXT } =
-    activePalette;
+    useContext(ThemeContext);
 
   const bgcolor = type === "primary" ? COLOR_BUTTON : COLOR_ALERT;
   const color = type === "primary" ? COLOR_BUTTON_TEXT : COLOR_ALERT_TEXT;
 
   return (
     <Button
-      variant="contained"
+      variant={variant}
       onClick={onClick}
+      disabled={disabled}
       sx={{
         "&:hover": {
           opacity: 0.5,
@@ -27,6 +30,7 @@ const ElementButton = ({
         color: color,
         minWidth: "6rem",
         border: "2px solid black",
+        textDecorationLine: "none",
       }}
     >
       {label}
