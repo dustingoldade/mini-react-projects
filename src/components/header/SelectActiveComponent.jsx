@@ -3,10 +3,10 @@ import muiStyles from "../../locales/muiStyles.json";
 import { Link, useLocation } from "react-router-dom";
 import ElementButton from "../core_elements/ElementButton";
 import Text from "../../locales/en.json";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import "./header.css";
 
-const { PADDING_MED } = muiStyles;
+const { PADDING_MED, PADDING_SM } = muiStyles;
 const {
   SelecActiveComponentTab_Average_Of_Array,
   SelecActiveComponentTab_BPM_Counter,
@@ -14,18 +14,18 @@ const {
   SelecActiveComponentTab_Fetch_Img,
 } = Text;
 
-const SelectActiveComponentTab = () => {
+const SelectActiveComponent = () => {
   const location = useLocation();
 
-  useEffect(() => {
-    //rerender
-  }, [location.pathname]);
+  // Trigger rerender on changing url
+  useMemo(() => {}, [location.pathname]);
 
   return (
     <Container sx={{ maxWidth: "80%" }}>
       <Box
         display={"flex"}
         py={PADDING_MED}
+        gap={PADDING_SM}
         px="auto"
         sx={{ justifyContent: "space-around" }}
         className="header__a--remove_text_decoration"
@@ -62,4 +62,4 @@ const SelectActiveComponentTab = () => {
   );
 };
 
-export default SelectActiveComponentTab;
+export default SelectActiveComponent;

@@ -1,38 +1,48 @@
-import styled from "@emotion/styled";
-import { TextField } from "@mui/material";
+import {
+  InputBase,
+  TextField,
+  OutlinedInput,
+  FilledInput,
+  Typography,
+  Box,
+} from "@mui/material";
+import { styled, createTheme } from "@mui/system";
+import { ThemeContext } from "../../App";
+import { useContext } from "react";
 
-const ElementTextField = ({ color }) => {
-  const styling = {
-    "& input": {
-      color: "red",
-    },
-    "& label": {
-      color: "red",
-    },
-    "& p": {
-      color: "red",
-    },
-    "& .MuiInput-root:before": {
-      borderBottom: "solid 5px red",
-    },
-    "& .Mui-focused:after": {
-      borderBottom: "solid 1px yellow",
-      color: "red",
-    },
-    "& label.Mui-focused": {
-      color: "red",
-    },
-  };
+export const ElementTextField = ({
+  showError,
+  value,
+  helperText,
+  onChange,
+}) => {
+  const { COLOR_ALERT, COLOR_SECONDARY_CONTRAST } = useContext(ThemeContext);
 
   return (
-    <TextField
-      variant="standard"
-      sx={styling}
-      label={"Hello"}
-      helperText={"mellow"}
-      error
-    />
+    <Box display={"flex"} justifyContent="center">
+      <Box display={"flex"} flexDirection={"column"} alignItems={"start"}>
+        <InputBase
+          onChange={onChange}
+          value={value}
+          label="sdfs"
+          sx={{
+            color: COLOR_SECONDARY_CONTRAST,
+            borderBottom: `solid 1px ${COLOR_SECONDARY_CONTRAST}`,
+            width: "100%",
+          }}
+        />
+
+        <Typography
+          variant="subtitle2"
+          sx={{
+            color: `${showError ? COLOR_ALERT : COLOR_SECONDARY_CONTRAST}`,
+            textAlign: "start",
+            fontSize: ".7rem",
+          }}
+        >
+          {helperText}
+        </Typography>
+      </Box>
+    </Box>
   );
 };
-
-export default ElementTextField;

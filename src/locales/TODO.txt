@@ -1,15 +1,19 @@
 
 
 todo:
-fix buttons - make disable and text decaration
+
+convert to ts
+fix buttons l
 
 
 
 
 Done:
+-fix that imput form's styling
 - Add context - across componenets
 - Make something to show one of the comps
 - Fix loading thing of dog and cat
 - Fix BG of body
 - fix pallete    - use context for pallete... create a styled component for the form unput. 
 think about a more clever way to display each component while not showing them all. 
+fix buttons - make disable and text decaration

@@ -7,9 +7,9 @@ import React, { useState } from "react";
 import colorPalette from "./locales/colorPalette.json";
 import { Route, Routes } from "react-router-dom";
 import PaletteSelection from "./components/palette_selection/PaletteSelction";
-
 import NewPhotos from "./components/new_photos/NewPhotos";
-import SelectActiveComponentTab from "./components/header/SelectActiveComponentTab";
+import SelectActiveComponent from "./components/header/SelectActiveComponent";
+import { ElementTextField } from "./components/core_elements/ElementTextField";
 
 export const ThemeContext = React.createContext();
 
@@ -29,7 +29,7 @@ function App() {
         }}
       >
         <Header />
-        <SelectActiveComponentTab />
+        <SelectActiveComponent />
         <Routes>
           <Route path="/" element={<AverageOfArray />} />
           <Route path="/arrayaverager" element={<AverageOfArray />} />

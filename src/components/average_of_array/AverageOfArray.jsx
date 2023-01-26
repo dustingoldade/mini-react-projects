@@ -9,13 +9,10 @@ import imgs from "../../locales/img/imgIndex";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
 import ElementShowCodeSinpIt from "../core_elements/showCodeSnipIt/ElementShowCodeSnipIt";
+import { ElementTextField } from "../core_elements/ElementTextField";
 const { CodeSnipIt_AverageOfArray } = imgs;
 
-const {
-  AverageOfArry_Title,
-  AverageOfArry_HelperText,
-  AverageOfArry_TextFieldLabel,
-} = jsonText;
+const { AverageOfArry_Title, AverageOfArry_HelperText } = jsonText;
 const { PADDING_MED } = muiStyles;
 
 const AverageOfArray = () => {
@@ -33,13 +30,10 @@ const AverageOfArray = () => {
     <ElementPaper>
       <ElementTitle title={AverageOfArry_Title} />
       <Box sx={{ mt: PADDING_MED }}>
-        <TextField
-          variant="standard"
-          error={showErrorInput}
-          id="filled-basic"
-          label={AverageOfArry_TextFieldLabel}
-          helperText={errorHelperText + AverageOfArry_HelperText}
+        <ElementTextField
+          showError={showErrorInput}
           value={inputValue}
+          helperText={errorHelperText + AverageOfArry_HelperText}
           onChange={inputValueHandler}
         />
       </Box>
