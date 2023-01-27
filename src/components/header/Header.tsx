@@ -2,6 +2,8 @@ import { Box, Typography } from "@mui/material";
 import muiStyles from "../../locales/muiStyles.json";
 import { ThemeContext } from "../../App";
 import { useContext } from "react";
+import JsonText from "../../locales/en.json";
+const { Website_Title } = JsonText;
 
 const { PADDING_MED, PADDING_SM } = muiStyles;
 
@@ -15,7 +17,7 @@ const Header = () => {
         sx={{ color: COLOR_HEADLINE, p: PADDING_MED }}
         align={"center"}
       >
-        Dustin Goldade's Mini React Projects:
+        {Website_Title}
       </Typography>
     </Box>
   );

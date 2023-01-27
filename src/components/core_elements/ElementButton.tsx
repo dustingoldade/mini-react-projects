@@ -1,13 +1,13 @@
 import { Button } from "@mui/material";
 import { ThemeContext } from "../../App";
 import { useContext } from "react";
+import { ElementButtonProps } from "../../locales/ts.models";
 
-const ElementButton = ({
+const ElementButton: React.FC<ElementButtonProps> = ({
   onClick,
   label = "",
   type = "primary",
-  variant = "contained",
-  disabled,
+  disabled = false,
 }) => {
   const { COLOR_BUTTON, COLOR_BUTTON_TEXT, COLOR_ALERT, COLOR_ALERT_TEXT } =
     useContext(ThemeContext);
@@ -17,7 +17,7 @@ const ElementButton = ({
 
   return (
     <Button
-      variant={variant}
+      variant="contained"
       onClick={onClick}
       disabled={disabled}
       sx={{

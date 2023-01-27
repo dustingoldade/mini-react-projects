@@ -1,7 +1,13 @@
-import allPaletteThemesObj from "../../locales/colorPalette.json";
 import { Box } from "@mui/material";
+import {
+  PaletteDisplayBoxProps,
+  AllPaletteThemes,
+} from "../../locales/ts.models";
 
-const PaletteDisplayBox = ({ element }) => {
+const allPaletteThemesObj =
+  require("../../locales/colorPalette.json") as AllPaletteThemes;
+
+const PaletteDisplayBox: React.FC<PaletteDisplayBoxProps> = ({ element }) => {
   return (
     <Box
       sx={{

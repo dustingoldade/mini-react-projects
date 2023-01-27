@@ -3,19 +3,19 @@ import BPMCounter from "./components/bpm_counter/BpmCounter";
 import Header from "./components/header/Header";
 import { Box } from "@mui/system";
 import "./App.css";
-import React, { useState } from "react";
-import colorPalette from "./locales/colorPalette.json";
+import { useState, createContext } from "react";
 import { Route, Routes } from "react-router-dom";
 import PaletteSelection from "./components/palette_selection/PaletteSelction";
 import NewPhotos from "./components/new_photos/NewPhotos";
-import SelectActiveComponent from "./components/header/SelectActiveComponent";
-import { ElementTextField } from "./components/core_elements/ElementTextField";
+import SelectActiveComponent from "./components/select_active_component/SelectActiveComponent";
+import { AllPaletteThemes, PaletteThemeType } from "./locales/ts.models";
+const colorPalette = require("./locales/colorPalette.json") as AllPaletteThemes;
 
-export const ThemeContext = React.createContext();
+export const ThemeContext = createContext<any>(null);
 
 function App() {
   const [selectedColorPalette, setSelectedColorPalette] = useState("CLEAN");
-  const activePalette = colorPalette[selectedColorPalette];
+  const activePalette: PaletteThemeType = colorPalette[selectedColorPalette];
   const { COLOR_BG } = activePalette;
 
   return (

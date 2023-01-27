@@ -3,7 +3,7 @@ import jsonText from "../../locales/en.json";
 
 const { AverageOfArry_HelperTextError, AverageOfArry_Average } = jsonText;
 
-const cleanString = (string) => {
+const cleanString = (string: string) => {
   const trimmedString = string.trim();
   //Reject on repeating commas
   if (trimmedString.includes(",,")) {
@@ -23,7 +23,7 @@ const cleanString = (string) => {
   return trimmedString;
 };
 
-const returnAverage = (string) => {
+const returnAverage = (string: string) => {
   const array = string.split(",").map((num) => +num);
   const total = array.reduce((acc, num) => (acc += num), 0);
   const average = total / array.length;
@@ -35,8 +35,8 @@ const useAverageOfArray = () => {
   const [inputValue, setInputValue] = useState("");
   const [showErrorInput, setShowErrorInput] = useState(false);
 
-  const inputValueHandler = (e) => {
-    setInputValue(e.target.value);
+  const inputValueHandler = (e: React.FormEvent<HTMLInputElement>) => {
+    setInputValue(e.currentTarget.value);
   };
 
   const showNumber = () => {

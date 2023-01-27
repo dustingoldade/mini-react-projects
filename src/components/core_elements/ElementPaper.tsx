@@ -2,10 +2,11 @@ import { Paper, Container } from "@mui/material";
 import muiStyles from "../../locales/muiStyles.json";
 import { ThemeContext } from "../../App";
 import { useContext } from "react";
+import { ElementPaperProps } from "../../locales/ts.models";
 
 const { PADDING_MED } = muiStyles;
 
-const ElementPaper = ({ children }) => {
+const ElementPaper: React.FC<ElementPaperProps> = ({ children }) => {
   const { COLOR_SECONDARY } = useContext(ThemeContext);
 
   return (

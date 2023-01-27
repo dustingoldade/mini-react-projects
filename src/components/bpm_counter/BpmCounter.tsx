@@ -1,4 +1,4 @@
-import { Box, Container, Paper, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import ElementTitle from "../core_elements/ElementTitle";
 import ElementPaper from "../core_elements/ElementPaper";
 import ElementButton from "../core_elements/ElementButton";
@@ -8,8 +8,8 @@ import ElementShowCodeSinpIt from "../core_elements/showCodeSnipIt/ElementShowCo
 import { useState, useContext } from "react";
 import { ThemeContext } from "../../App";
 import imgs from "../../locales/img/imgIndex";
-const { CodeSnipIt_BPM } = imgs;
 
+const { CodeSnipIt_BPM } = imgs;
 const { PADDING_MED, PADDING_LG } = muiStyles;
 const { BPMCounter_Title, BPMCounter_Btn_Tap, BPMCounter_Btn_Reset } = jsonText;
 
@@ -20,7 +20,7 @@ const BPMCounter = () => {
   const { COLOR_SECONDARY_CONTRAST } = useContext(ThemeContext);
   const [bpmText, setBpmText] = useState("BPM: 0.0");
 
-  const bpmClickHandler = (e) => {
+  const bpmClickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (!firstClickTime) {
       firstClickTime = e.timeStamp;
       return;

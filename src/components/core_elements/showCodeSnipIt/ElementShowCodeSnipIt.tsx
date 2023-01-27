@@ -1,14 +1,17 @@
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { useState, useContext } from "react";
 import ElementCodeSnipit from "./ElementCodeSnipit";
 import muiStyles from "../../../locales/muiStyles.json";
 import text from "../../../locales/en.json";
+import { ElementShowCodeSnipItProps } from "../../../locales/ts.models";
 import { ThemeContext } from "../../../App";
 const { PADDING_MED } = muiStyles;
 const { ElementShowCodeSinpIt_Show_Code, ElementShowCodeSinpIt_Hide_Code } =
   text;
 
-const ElementShowCodeSnipIt = ({ codeSnipIt }) => {
+const ElementShowCodeSnipIt: React.FC<ElementShowCodeSnipItProps> = ({
+  codeSnipIt,
+}) => {
   const [showCodeSnipIt, setShowCodeSnipIt] = useState(false);
   const { COLOR_SECONDARY_CONTRAST } = useContext(ThemeContext);
   const showCodeSnipItHandler = () => {
@@ -26,7 +29,7 @@ const ElementShowCodeSnipIt = ({ codeSnipIt }) => {
             mt: 2,
           }}
           onClick={showCodeSnipItHandler}
-          variant={"caption"}
+          variant="outlined"
         >
           {!showCodeSnipIt
             ? ElementShowCodeSinpIt_Show_Code

@@ -1,16 +1,9 @@
-import {
-  InputBase,
-  TextField,
-  OutlinedInput,
-  FilledInput,
-  Typography,
-  Box,
-} from "@mui/material";
-import { styled, createTheme } from "@mui/system";
+import { InputBase, Typography, Box } from "@mui/material";
 import { ThemeContext } from "../../App";
 import { useContext } from "react";
+import { ElementTextFieldProps } from "../../locales/ts.models";
 
-export const ElementTextField = ({
+export const ElementTextField: React.FC<ElementTextFieldProps> = ({
   showError,
   value,
   helperText,
@@ -24,7 +17,6 @@ export const ElementTextField = ({
         <InputBase
           onChange={onChange}
           value={value}
-          label="sdfs"
           sx={{
             color: COLOR_SECONDARY_CONTRAST,
             borderBottom: `solid 1px ${COLOR_SECONDARY_CONTRAST}`,

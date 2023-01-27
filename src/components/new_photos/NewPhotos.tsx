@@ -9,7 +9,7 @@ import { useState } from "react";
 const { NewPhoto_Title, NewPhoto_Btn_Cat, NewPhoto_Btn_Dog } = jsonText;
 const { PADDING_MED } = muiStyles;
 
-const fetchData = async (url) => {
+const fetchData = async (url: string) => {
   const response = await fetch(url);
   const json = await response.json();
   return json;

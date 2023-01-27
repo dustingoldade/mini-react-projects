@@ -3,8 +3,8 @@ import muiStyles from "../../locales/muiStyles.json";
 import { Link, useLocation } from "react-router-dom";
 import ElementButton from "../core_elements/ElementButton";
 import Text from "../../locales/en.json";
-import { useEffect, useMemo } from "react";
-import "./header.css";
+import { useMemo } from "react";
+import "./SelectActiveComponent.css";
 
 const { PADDING_MED, PADDING_SM } = muiStyles;
 const {

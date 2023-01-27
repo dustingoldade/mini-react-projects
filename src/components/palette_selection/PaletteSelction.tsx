@@ -6,11 +6,14 @@ import jsonText from "../../locales/en.json";
 import muiStyles from "../../locales/muiStyles.json";
 import allPaletteThemesObj from "../../locales/colorPalette.json";
 import PaletteDisplayBox from "./PaletteDisplayBox";
+import { PaletteSelectionProps } from "../../locales/ts.models";
 const { PADDING_MED } = muiStyles;
 const { PaletteSelection_Title } = jsonText;
-const allPaletteThemesArray = Object.keys(allPaletteThemesObj);
+const allPaletteThemesArray = Object.keys(
+  allPaletteThemesObj
+) as (keyof typeof allPaletteThemesObj)[];
 
-const paletteButtons = (passThroughFunction) => {
+const paletteButtons = (passThroughFunction: (key: string) => void) => {
   return allPaletteThemesArray.map((element) => (
     <Box
       key={`box_${element}`}
@@ -21,14 +24,15 @@ const paletteButtons = (passThroughFunction) => {
           passThroughFunction(element);
         }}
         label={allPaletteThemesObj[element]["NAME"]}
-        activePalette={allPaletteThemesObj[element]}
       />
       <PaletteDisplayBox element={element} />
     </Box>
   ));
 };
 
-const PaletteSelection = ({ setSelectedColorPalette }) => {
+const PaletteSelection: React.FC<PaletteSelectionProps> = ({
+  setSelectedColorPalette,
+}) => {
   return (
     <ElementPaper>
       <ElementTitle title={PaletteSelection_Title} />
