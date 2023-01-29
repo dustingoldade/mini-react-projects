@@ -25,7 +25,7 @@ const ElementShowCodeSnipIt: React.FC<ElementShowCodeSnipItProps> = ({
           sx={{
             color: COLOR_SECONDARY_CONTRAST,
             size: "small",
-            border: 2,
+            border: 1,
             mt: 2,
           }}
           onClick={showCodeSnipItHandler}
