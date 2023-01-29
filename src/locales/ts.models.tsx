@@ -6,7 +6,7 @@ export type ElementTextFieldProps = {
   showError: boolean;
   value: string;
   helperText: string;
-  onChange: (e: any) => void; // Fix!!
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 export type ElementPaperProps = {
